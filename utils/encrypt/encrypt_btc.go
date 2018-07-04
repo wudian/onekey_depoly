@@ -3,44 +3,42 @@ package encrypt
 import (
 	"encoding/hex"
 	"strings"
-	// "github.com/btcsuite/btcd/btcec"
-	"gitlab.zhonganinfo.com/tech_bighealth/za-delos/btcec"
-
+	"github.com/btcsuite/btcd/btcec"
 	ethcmn "gitlab.zhonganinfo.com/tech_bighealth/za-delos/eth/common"
 	"gitlab.zhonganinfo.com/tech_bighealth/za-delos/eth/crypto/sha3"
 	"gitlab.zhonganinfo.com/tech_bighealth/za-delos/eth/rlp"
 )
 
-// func GenKey() (privKey, publicKey string, err error) {
+func GenKey() (privKey, publicKey string, err error) {
 
-// 	privkey, err := btcec.NewPrivateKey(btcec.S256())
-// 	if err != nil {
-// 		return
-// 	}
+	privkey, err := btcec.NewPrivateKey(btcec.S256())
+	if err != nil {
+		return
+	}
 
-// 	privKey = hex.EncodeToString(privkey.ToECDSA().D.Bytes())
+	privKey = hex.EncodeToString(privkey.ToECDSA().D.Bytes())
 
-// 	pubkey := privkey.PubKey()
+	pubkey := privkey.PubKey()
 
-// 	publicKey = hex.EncodeToString(pubkey.SerializeCompressed())
+	publicKey = hex.EncodeToString(pubkey.SerializeCompressed())
 
-// 	return
-// }
+	return
+}
 
-// func PrivToPub(privKey string) (publicKey string, err error) {
-// 	if strings.Index(privKey, "0x") == 0 {
-// 		privKey = privKey[2:]
-// 	}
-// 	pkBytes, err := hex.DecodeString(privKey)
-// 	if err != nil {
-// 		return
-// 	}
-// 	_, publicK := btcec.PrivKeyFromBytes(btcec.S256(), pkBytes)
+func PrivToPub(privKey string) (publicKey string, err error) {
+	if strings.Index(privKey, "0x") == 0 {
+		privKey = privKey[2:]
+	}
+	pkBytes, err := hex.DecodeString(privKey)
+	if err != nil {
+		return
+	}
+	_, publicK := btcec.PrivKeyFromBytes(btcec.S256(), pkBytes)
 
-// 	publicKey = hex.EncodeToString(publicK.SerializeCompressed())
+	publicKey = hex.EncodeToString(publicK.SerializeCompressed())
 
-// 	return
-// }
+	return
+}
 
 func ValidPublicKey(publicKey string) (err error) {
 	var (

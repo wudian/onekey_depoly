@@ -1,0 +1,16 @@
+{
+  "ListenAddress": ":8000",
+  "BackendCallAddress": "tcp://10.253.163.57:46657",
+  "TimeOut":10,
+  "Public":false,
+  "GasLimit": 10000000,
+  "Debug":true,
+  "TiConnEndpoint":"http://11382-zis-other-ti-capsule-anlinkapiserver.test.za-tech.net",
+  "TiConnKey":"ZWViMTYyNWJlMTNmNDg5NDg2MTA1Mzhl",
+  "TiConnSecret":"MjJkZWMzMDUyMjM5NDc3YTkxYzZlNjkxMjA5NGQ2YTQ4Mzc3YzlmMmQ1ZDc0MDdj",
+
+  "redis":"r-tj7748e7ace28aa4.redis.rds.aliyuncs.com:6379",
+  "redisidls":10,
+	"redistimeout":60,
+	"expire":36000
+}
