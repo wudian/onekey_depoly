@@ -3,6 +3,7 @@ node=$1
 nodes=$2
 path=$3
 passwd=$4
+bin=$5
 
 if [ ! -d $node ]; then
 mkdir $node
@@ -19,13 +20,13 @@ expect {
 expect "*#"
 send "\r"
 expect "*#"
-send "cd /home/wd/advertise-bin; git checkout -- .; git pull; sh step0.sh $nodes $path ;  \r"
+send "cd ${bin}; git checkout -- .; git pull; cd depoly_nodes; sh step0.sh $nodes $path ;  \r"
 expect "*#"
 send "exit\r"
 
 
 
-spawn scp wd@$node:${path}priv_validator.json $node/
+spawn scp wd@$node:${path}/priv_validator.json $node/
 expect {
  "(yes/no)?"
   {

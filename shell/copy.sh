@@ -7,7 +7,5 @@ cp shell/chain/chain /home/wd/advertise-bin/chain
 
 cp shell/midapi/midapi /home/wd/advertise-bin/midapi
 
-
-# cp shell/browser/browser /home/wd/advertise-bin/browser
-
+cp -rf shell/depoly_nodes* ~/advertise-bin/
 

@@ -19,7 +19,7 @@ expect {
 expect "*#"
 send "\r"
 expect "*#"
-send "scp wd@$from:${bin}/genesis.json $path  \r"
+send "scp wd@$from:${bin}/genesis.json ${path}/  \r"
 expect {
  "(yes/no)?"
   {
