@@ -32,8 +32,7 @@ do
                                 \"${pub_key}\"
                         ],
                         \"rpc\": \"tcp://${node}:46657\"
-                },
-	"$str1
+                },"$str1
 done
 str1=${str1:0:-1}
 
