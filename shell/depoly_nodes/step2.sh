@@ -1,5 +1,6 @@
 
 nodes=$1
+address=$2
 
 str0="
 {
@@ -19,7 +20,7 @@ str0="
 str1=""
 for node in ${nodes[@]}; 
 do 
-	#pub_key=`sed -n '14,14p' ${node}/priv_validator.json|sed s/[[:space:]\t\"]//g`;
+	pub_key=`sed -n '14,14p' ${node}/priv_validator.json|sed s/[[:space:]\t\"]//g`;
 	str1="
 	{
                         \"amount\": 100,
@@ -40,6 +41,6 @@ str2="
 }
 "
 
-echo ${str0}${str1}${str2}
+echo ${str0}${str1}${str2} > genesis.json
 
 

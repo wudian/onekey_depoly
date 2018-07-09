@@ -1,5 +1,7 @@
 
 node=$1
+passwd=$2
+bin=$3
 
 /usr/bin/expect <<-EOF
 set timeout 30

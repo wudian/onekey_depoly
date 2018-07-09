@@ -1,5 +1,8 @@
-from=$midapi_node
 node=$1   #ip
+path=$2
+passwd=$3
+bin=$4
+from=$5
 
 if [ -d $node ]; then
 rm -rf $node

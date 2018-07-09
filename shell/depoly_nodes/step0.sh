@@ -1,5 +1,6 @@
 
 nodes=$1
+path=$2
 
 sh kill.sh chain
 
