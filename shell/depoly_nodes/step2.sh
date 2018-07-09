@@ -1,6 +1,7 @@
 
 nodes=$1
 address=$2
+bin=$3
 
 str0="
 {
@@ -41,6 +42,6 @@ str2="
 }
 "
 
-echo ${str0}${str1}${str2} > genesis.json
+echo ${str0}${str1}${str2} > ${bin}/genesis.json
 
 

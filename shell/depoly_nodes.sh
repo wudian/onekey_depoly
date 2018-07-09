@@ -11,7 +11,7 @@ cd depoly_nodes
 
 for node in ${nodes[@]}; do sh step1.sh $node $nodes $path $passwd $bin ; done
 
-sh step2.sh $nodes $address
+sh step2.sh $nodes $address $bin
 
 for node in ${nodes[@]}; do sh step3.sh $node $path $passwd $bin $midapi_node ; done
 
