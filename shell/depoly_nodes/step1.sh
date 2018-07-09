@@ -20,7 +20,7 @@ expect {
 expect "*#"
 send "\r"
 expect "*#"
-send "cd ${bin}; git checkout -- .; git pull; cd depoly_nodes; sh step0.sh $nodes $path ;  \r"
+send "cd ${bin}; git checkout -- .; git pull; cd depoly_nodes; sh step0.sh $nodes $path $bin ;  \r"
 expect "*#"
 send "exit\r"
 

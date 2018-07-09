@@ -1,7 +1,9 @@
 
 nodes=$1
 path=$2
+bin=$3
 
+cd $bin
 sh kill.sh chain
 
 rm -f nohup.out delos_*
