@@ -1,4 +1,6 @@
 
+nodes=$1
+
 str0="
 {
         \"app_hash\": \"\",

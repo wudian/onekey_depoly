@@ -1,4 +1,6 @@
 
+node=$1
+
 /usr/bin/expect <<-EOF
 set timeout 30
 
@@ -8,7 +10,7 @@ expect {
 "*password:" { send "$passwd\r" }
 }
 expect "*#"
-send "cd ${bin}; sh kill.sh midapi; sh step5.sh ;  \r"
+send "cd ${bin}; sh kill.sh midapi; sh step5.sh $node ;  \r"
 expect "*#"
 send "cd midapi/; nohup ./midapi > nohup.out &  \r"
 expect "*#"

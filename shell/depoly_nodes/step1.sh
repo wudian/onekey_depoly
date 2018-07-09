@@ -1,5 +1,8 @@
 
 node=$1
+nodes=$2
+path=$3
+passwd=$4
 
 if [ ! -d $node ]; then
 mkdir $node
@@ -16,7 +19,7 @@ expect {
 expect "*#"
 send "\r"
 expect "*#"
-send "cd /home/wd/advertise-bin; git checkout -- .; git pull; sh step0.sh ;  \r"
+send "cd /home/wd/advertise-bin; git checkout -- .; git pull; sh step0.sh $nodes;  \r"
 expect "*#"
 send "exit\r"
 

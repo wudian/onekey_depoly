@@ -1,3 +1,6 @@
+
+nodes=$1
+
 sh kill.sh chain
 
 rm -f nohup.out delos_*

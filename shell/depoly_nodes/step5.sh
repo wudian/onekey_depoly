@@ -1,5 +1,5 @@
 
-IP=$midapi_node
+IP=$1
 
 rm -f midapi/config.json
 echo "

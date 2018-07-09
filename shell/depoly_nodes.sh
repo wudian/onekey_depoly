@@ -9,10 +9,10 @@ bin=~/advertise-bin
 
 cd depoly_nodes
 
-for node in ${nodes[@]}; do sh step1.sh $node; done
+for node in ${nodes[@]}; do sh step1.sh $node $nodes $path $passwd; done
 
-sh step2.sh
+sh step2.sh $nodes
 
 for node in ${nodes[@]}; do sh step3.sh $node; done
 
-sh step4.sh
+sh step4.sh $midapi_node
