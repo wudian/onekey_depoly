@@ -7,10 +7,11 @@ import (
 	"path"
 	"syscall"
 
-	"gitlab.zhonganinfo.com/tech_bighealth/za-delos/chain/log"
-	apiconf "gitlab.zhonganinfo.com/tech_bighealth/za-delos/midapi/config"
-	"gitlab.zhonganinfo.com/tech_bighealth/za-delos/midapi/handlers"
-	apiserver "gitlab.zhonganinfo.com/tech_bighealth/za-delos/midapi/server"
+	apiconf "wudian_go/midapi/config"
+	"wudian_go/midapi/handlers"
+	apiserver "wudian_go/midapi/server"
+	"wudian_go/lib/log"
+
 	"go.uber.org/zap"
 	"gopkg.in/urfave/cli.v1"
 )
